@@ -61,6 +61,9 @@ $(function () {
                 console.log(res);
                 if (res.status !== 0) return console.log(res.message);//layer.msg(res.message) 
                 layer.msg('登录成功！')
+                // 2. 强制跳转到登录页面
+                location.href = './index.html'
+                localStorage.setItem('token', res.token)
             }
         })
     })
